@@ -141,8 +141,8 @@ class MoveItDemo:
         rospy.sleep(1)
  
         # Start the arm in the "arm_up" pose stored in the SRDF file
-        rospy.loginfo("Set Arm: forward")
-        arm.set_named_target('forward')
+        rospy.loginfo("Set Arm: down")
+        arm.set_named_target('down')
         if arm.go() != True:
             rospy.logwarn("  Go failed")
 
