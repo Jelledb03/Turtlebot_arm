@@ -11,7 +11,7 @@ By default this will work with the original white/green TurtleBot arm.  To use t
 ## Attaching the Arm to a Robot
 Open your xacro-macro-magic URDF, and add something like:
 
-       <include filename="$(find turtlebot_arm_description)/urdf/$(optenv TURTLEBOT_ARM1 pincher)_arm.xacro" />
+       <include filename="$(find turtlebot_arm_description)/urdf/$(optenv TURTLEBOT_ARM1 turtlebot)_arm.xacro" />
        <turtlebot_arm parent="base_link" color="white" gripper_color="green"
                  joints_vlimit="1.571" pan_llimit="-2.617" pan_ulimit="2.617">
           <origin xyz="0 0 1"/>
