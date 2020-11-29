@@ -141,16 +141,16 @@ class MoveItDemo:
         rospy.sleep(1)
  
         # Start the arm in the "arm_up" pose stored in the SRDF file
-        rospy.loginfo("Set Arm: right_up")
-        arm.set_named_target('right_up')
+        rospy.loginfo("Set Arm: forward")
+        arm.set_named_target('forward')
         if arm.go() != True:
             rospy.logwarn("  Go failed")
 
         # Move the gripper to the open position
-        rospy.loginfo("Set Gripper: Open " +  str(self.gripper_opened))
-        gripper.set_joint_value_target(self.gripper_opened)
-        if gripper.go() != True:
-            rospy.logwarn("  Go failed")
+        # rospy.loginfo("Set Gripper: Open " +  str(self.gripper_opened))
+        # gripper.set_joint_value_target(self.gripper_opened)
+        #if gripper.go() != True:
+        #    rospy.logwarn("  Go failed")
 
 if __name__ == "__main__":
     MoveItDemo()
